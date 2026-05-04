@@ -41,6 +41,15 @@ QString stringify(const rapidjson::Value &value)
     return buffer.GetString();
 }
 
+QString pp(const rapidjson::Value &value)
+{
+    rapidjson::StringBuffer buffer;
+    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
+    value.Accept(writer);
+
+    return buffer.GetString();
+}
+
 bool getSafeObject(rapidjson::Value &obj, const char *key,
                    rapidjson::Value &out)
 {
