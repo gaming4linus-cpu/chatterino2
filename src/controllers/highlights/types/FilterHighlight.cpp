@@ -75,7 +75,7 @@ void FilterHighlight::setBackgroundColor(const QColor &newValue)
 
 QIcon FilterHighlight::getType() const
 {
-    return QIcon{":/buttons/filters.svg"};
+    return QIcon{":/settings/filters.svg"};
 }
 
 bool FilterHighlight::willPlayAnySound() const
